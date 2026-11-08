@@ -137,6 +137,7 @@ protected:
     virtual void nodeSwap( AVLNode<Key,Value>* n1, AVLNode<Key,Value>* n2);
 
     // Add helper functions here
+    using BinarySearchTree<Key, Value>::nodeSwap; // keep base version visible (silences hidden-virtual warning)
     void rotateLeft(AVLNode<Key,Value>* x);
     void rotateRight(AVLNode<Key,Value>* x);
     void insertFix(AVLNode<Key,Value>* p, AVLNode<Key,Value>* n);
